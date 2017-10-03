@@ -6,14 +6,6 @@ cssvars = require('postcss-simple-vars'),
 nested = require('postcss-nested'),
 cssimport = require('postcss-import');
 
-gulp.task('default',function(){
-   console.log("Hooray - you created a new task.") 
-})
-
-gulp.task('html',function(){
-   console.log("Imagine your life falling") 
-})
-
 gulp.task('styles',function(){
    return gulp.src('./app/assets/styles/style.css')
        .pipe(postcss([cssimport, cssvars, nested, autoprefixer]))
